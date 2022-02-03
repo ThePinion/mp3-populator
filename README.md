@@ -16,7 +16,9 @@ Almost everything you do, you do by changing the file name.
 The first way to do it, is to place the metadata inside the curly brackets {}.
 You define the field, and the coresponding metadata will be generated.
 For example:
-'''{-a Nikolay $1 -c Chopin -d 2015 -i lugansky_chopin -b $c by $a} Lugansky Chopin Piano Concerto No. 1 in E minor.mp3'''
+'''
+{-a Nikolay $1 -c Chopin -d 2015 -i lugansky_chopin -b $c by $a} Lugansky Chopin Piano Concerto No. 1 in E minor.mp3
+'''
 will output the .mp3 file with following metadata fields.
 * Artist: Nikolai Lugansky
 * Composer: Chopin
@@ -28,7 +30,9 @@ Note that the order of the fields matters for some are generated using others.
 Additionally there are the default values for each field, so that they are generated despite you not providing their values. They are defined in the Manager/MetaFile class and can be changed easily.
 The second way to populate the fields is to place the $[] marks just before the corresponding words.
 For example:
-'''$b2 $a Lugansky $c Chopin $t- Piano Concerto No. 1 in E minor $i lugansky_chopin.mp3'''
+'''
+$b2 $a Lugansky $c Chopin $t- Piano Concerto No. 1 in E minor $i lugansky_chopin.mp3
+'''
 will output:
 * Artist: Lugansky
 * Composer: Chopin
