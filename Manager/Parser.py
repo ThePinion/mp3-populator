@@ -25,7 +25,7 @@ def name_parse(file_name: str) -> Tuple[str, str]:
             if word[0] == '$':
                 word = word[1:]
                 # We will be adding the words till the next parameter
-                if word[-1] == '-':
+                if len(word) > 0 and word[-1] == '-':
                     word = word[:-1]
                     repeat = 0
                     till_next = True
