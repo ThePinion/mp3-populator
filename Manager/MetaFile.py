@@ -1,5 +1,3 @@
-from mutagen.mp3 import MP3
-from mutagen.id3 import ID3, APIC, error
 import eyed3
 from functools import partial
 from Manager.NameReplacer import NameReplacer
@@ -50,7 +48,7 @@ class MetaFile:
         return setters_and_getters
 
     def get_defaults(self): # -> dict
-        """Returns the default values of the fields sometimes based on other fields or the name"""
+        """Returns the lambdas for the default values of the fields based on other fields or the name"""
         out = {
             'c': ['$a'],
             'a': ['unknown'],

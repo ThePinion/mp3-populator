@@ -1,4 +1,5 @@
 *.mp3
 *.jpg
-__pycache__/
-
+/Manager/__pycache__/
+desktop.ini
+Mp3tag.lnk
